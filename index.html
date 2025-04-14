@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silence AI</title>
+  <style>
+    :root {
+      --bg-color: #0a0f1c;
+      --card-color: #111827;
+      --text-color: #f8fafc;
+      --accent: #3b82f6;
+      --highlight: #60a5fa;
+      --neon-glow: #2563eb;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', 'Roboto', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+      transition: background 0.3s ease;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0f172a, #1e3a8a);
+      padding: 2rem;
+      text-align: center;
+      font-size: 2.2rem;
+      color: var(--highlight);
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 0 25px var(--neon-glow);
+      animation: fadeIn 1s ease-out;
+    }
+
+    .dashboard {
+      padding: 2rem;
+      display: grid;
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: linear-gradient(145deg, #111827, #1e293b);
+      border-radius: 18px;
+      padding: 2rem;
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.1), 0 0 40px rgba(0, 0, 0, 0.5);
+      transition: all 0.4s ease;
+      transform: translateY(0);
+      animation: slideUp 0.8s ease-in-out forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 30px var(--neon-glow);
+    }
+
+    .card h2 {
+      margin-top: 0;
+      color: var(--accent);
+      border-bottom: 1px solid #334155;
+      padding-bottom: 0.5rem;
+      font-size: 1.6rem;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    ul {
+      padding-left: 1rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+      list-style: disc;
+      color: #cbd5e1;
+    }
+
+    iframe.chatbox {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 16px;
+      background-color: var(--card-color);
+      box-shadow: 0 0 25px rgba(59, 130, 246, 0.2);
+      animation: fadeIn 1.5s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .dashboard {
+        padding: 1rem;
+      }
+      iframe.chatbox {
+        height: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>SILENCE AI - Futuristic Edition</header>
+
+  <div class="dashboard">
+    <div class="card">
+      <h2>Quick Ask</h2>
+      <p>Type your topic or question in the chat below to get perfect AI-generated notes.</p>
+    </div>
+
+    <div class="card">
+      <h2>Recent Topics</h2>
+      <ul>
+        <li>Carbon and Its Compounds</li>
+        <li>Ohm's Law</li>
+        <li>Magnetic Effects of Electric Current</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Ask Our AI Chatbot</h2>
+      <!-- Replace with your actual Chatbase embed link -->
+      <iframe class="chatbox" src="https://www.chatbase.co/chatbot-iframe/Puw5sRJhgXZC87CsbGKu9"></iframe>
+    </div>
+  </div>
+</body>
+</html>
